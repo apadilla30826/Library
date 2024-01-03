@@ -1,0 +1,23 @@
+﻿@model List<Library.Models.Author>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">New Author</a>
+</p>
+<h1>Authors</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var Author in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=> Author.AuthorId)</td>
+                <td>@Html.DisplayFor(m=> Author.AuthorName)</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+﻿@model List<Library.Models.Genre>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">New Genre</a>
+</p>
+<h1>Genres</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Genre name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Genre in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=> Genre.GenreId)</td>
+                <td>@Html.DisplayFor(m=> Genre.GenreName)</td>
+            </tr>
+        }
+    </tbody>
+</table>
